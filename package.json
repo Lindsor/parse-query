@@ -1,0 +1,26 @@
+{
+  "name": "ln-parse-query",
+  "version": "1.0.0",
+  "description": "Parse the passed in query paramenter into an object with the same key value pairs.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Lindsor/parse-query.git"
+  },
+  "keywords": [
+    "parse",
+    "string",
+    "query",
+    "parameter",
+    "querystring"
+  ],
+  "author": "Marcelo Luz <marcelopluz@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Lindsor/parse-query/issues"
+  },
+  "homepage": "https://github.com/Lindsor/parse-query#readme"
+}
