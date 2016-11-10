@@ -10,8 +10,18 @@ function subParse(obj, subQuery) {
   subQuery = subQuery.split("=");
   var key = decodeURIComponent(subQuery[0]);
   var val = decodeURIComponent(subQuery[1] || "");
+  
+  /* If key already exists then its an array */
+  var currentValue = obj[key];
 
-  obj[key] = val;
+  if (typeof currentValue !== "undefined") {
+    
+    obj[key] = [].concat(currentValue, val);
+
+  } else {
+    obj[key] = val;
+  }
+
 
   return obj;
 }
@@ -35,7 +45,7 @@ function cleanQuery(query) {
 module.exports = exports = function(query) {
   var json = {};
 
-  if (!query) return json;
+  if (typeof query !== "string") return json;
 
   query = cleanQuery(query);
 
